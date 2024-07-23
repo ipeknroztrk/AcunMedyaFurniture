@@ -1,0 +1,45 @@
+﻿@model AcunMedyaFurniter.DAL.Entities.Product
+
+@{
+   
+    Layout = "~/Views/AdminLayout/Index.cshtml"; // Layout dosyasının yolunu kontrol edin
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="card-title">Ürün Güncelleme Sayfası</div>
+    </div>
+    <div class="card-body">
+
+
+        <form method="post" asp-action="UpdateProduct">
+            <input type="hidden" asp-for="ProductID" />
+
+            <div class="form-group">
+                <label asp-for="ProductName" class="font-weight-bold"></label>
+                <input asp-for="ProductName" class="form-control" placeholder="Ürün Adı" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProductImage" class="font-weight-bold"></label>
+                <input asp-for="ProductImage" type="url" class="form-control" placeholder="Ürün Görseli URL'si" />
+                <span asp-validation-for="ProductImage" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Price" class="font-weight-bold"></label>
+                <input asp-for="Price" type="number" class="form-control" placeholder="Ürün Fiyatı" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="font-weight-bold"></label>
+                <textarea asp-for="Description" class="form-control" placeholder="Ürün Açıklaması" rows="4"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary">Güncelle</button>
+            <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+        </form>
+    </div>

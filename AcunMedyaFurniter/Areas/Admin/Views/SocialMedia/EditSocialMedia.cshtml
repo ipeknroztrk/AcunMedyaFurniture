@@ -1,0 +1,40 @@
+﻿@model AcunMedyaFurniter.DAL.Entities.SocialMedia
+
+@{
+
+    Layout = "~/Views/AdminLayout/Index.cshtml"; // Layout dosyasının yolunu kontrol edin
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <div class="card-title">Ürün Ekleme Sayfası</div>
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="CreateSocialMedia" method="post">
+            <div class="form-group">
+                <label asp-for="Icon" class="font-weight-bold"></label>
+                <input asp-for="Icon" class="form-control" placeholder="İkon " />
+                <span asp-validation-for="Icon" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Name" class="font-weight-bold"></label>
+                <input asp-for="Name" type="number" class="form-control" placeholder="Ad" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Url" class="font-weight-bold"></label>
+                <textarea asp-for="Url" class="form-control" placeholder="Url" rows="4"></textarea>
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+            <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+        </form>
+    </div>

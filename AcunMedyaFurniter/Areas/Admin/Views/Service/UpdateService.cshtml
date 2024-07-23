@@ -1,0 +1,36 @@
+﻿@model AcunMedyaFurniter.DAL.Entities.Service
+
+@{
+    ViewData["Title"] = "Hizmet Güncelle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="card-title">Hizmet Güncelleme Sayfası</div>
+    </div>
+    <div class="card-body">
+        <form asp-action="UpdateService" method="post">
+            <div class="form-group">
+                <label asp-for="ServiceName" class="font-weight-bold">Hizmet Adı</label>
+                <input asp-for="ServiceName" class="form-control" placeholder="Hizmet Adı" />
+                <span asp-validation-for="ServiceName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="font-weight-bold">Açıklama</label>
+                <textarea asp-for="Description" class="form-control" placeholder="Açıklama" rows="4"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Icon" class="font-weight-bold">Icon URL'si</label>
+                <input asp-for="Icon" type="text" class="form-control" placeholder="Icon URL'si" />
+                <span asp-validation-for="Icon" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Güncelle</button>
+            <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+        </form>
+    </div>
+</div>

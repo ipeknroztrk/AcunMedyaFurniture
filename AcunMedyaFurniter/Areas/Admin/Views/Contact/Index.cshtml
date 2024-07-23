@@ -1,0 +1,52 @@
+﻿@model List<AcunMedyaFurniter.DAL.Entities.ContactInfo>
+
+@{
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <div class="d-flex align-items-center">
+                <h4 class="card-title">İletişim Bilgilerimiz</h4>
+                <button class="btn btn-primary btn-round ms-auto" data-bs-toggle="modal" data-bs-target="#addRowModal">
+                    <i class="fa fa-plus"></i> Ekle
+                </button>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table id="add-row" class="display table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Adres</th>
+                        <th>Telefon</th>
+                        <th>Email</th>
+                        <th style="width: 15%">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Adsress</td>
+                            <td>@item.Phone</td>
+                            <td>@item.Email</td>
+                            <td>
+                                <div class="form-button-action">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#editRowModal" class="btn btn-link btn-primary btn-lg" onclick="editSubscriber('@item.ContactInfoID', '@item.Email', '@item.Adsress', '@item.Phone')">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <form asp-action="DeleteSocialMedia" asp-controller="SocialMedia" method="post" style="display:inline;">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@item.ContactInfoID" />
+                                        <button type="submit" data-bs-toggle="tooltip" title="Remove" class="btn btn-link btn-danger">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>

@@ -1,0 +1,139 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\UILayout\" />
+    <None Remove="Views\Default\" />
+    <None Remove="ViewComponents\" />
+    <None Remove="ViewComponents\Default-Index\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\_DefaultFeatureComponents\" />
+    <None Remove="ViewComponents\UILayout\" />
+    <None Remove="Views\Shared\Components\_UILayoutNavbarComponents\" />
+    <None Remove="Views\Shared\Components\_UILayoutHeadComponents\" />
+    <None Remove="Views\Shared\Components\_UILayoutFooterComponents\" />
+    <None Remove="Views\Shared\Components\_DefaultProductComponents\" />
+    <None Remove="DAL\" />
+    <None Remove="DAL\Entities\" />
+    <None Remove="DAL\Context\" />
+    <None Remove="Views\AdminLayout\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Admin\" />
+    <None Remove="Areas\Admin\Controllers\" />
+    <None Remove="Areas\Admin\Models\" />
+    <None Remove="Areas\Admin\Views\" />
+    <None Remove="Areas\Admin\Data\" />
+    <None Remove="Areas\Admin\Views\Product\" />
+    <None Remove="Views\Register\" />
+    <None Remove="Views\Login\" />
+    <None Remove="Views\Shared\Components\_DefaultPopulerProductComponents\" />
+    <None Remove="Views\Shared\Components\_DefaultTestimonailComponents\" />
+    <None Remove="Views\Shared\Components\_DefaultWeHelpComponents\" />
+    <None Remove="Views\Shared\Components\_DefaultServiceComponents\" />
+    <None Remove="Views\Product\" />
+    <None Remove="Areas\Admin\Views\Testimonial\" />
+    <None Remove="Views\Subscribe\" />
+    <None Remove="Views\About\" />
+    <None Remove="Views\Shared\Components\_DefaultTeamComponent\" />
+    <None Remove="Views\Services\" />
+    <None Remove="Views\Contact\" />
+    <None Remove="Areas\Admin\Views\Shared\" />
+    <None Remove="Areas\Admin\ViewComponents\" />
+    <None Remove="Areas\Admin\ViewComponents\AdminLayoutComponent\" />
+    <None Remove="Areas\Admin\Views\Shared\Components\" />
+    <None Remove="Areas\Admin\Views\Shared\Components\_AdminNavbarLayoutComponenet\" />
+    <None Remove="Areas\Admin\Views\Shared\Components\_AdminSidebarComponent\" />
+    <None Remove="Areas\Admin\Views\Service\" />
+    <None Remove="Areas\Admin\Views\Team\" />
+    <None Remove="Areas\Admin\Views\Subscriber\" />
+    <None Remove="Areas\Admin\Views\Message\" />
+    <None Remove="Areas\Admin\Views\SocialMedia\" />
+    <None Remove="Areas\Admin\Views\Contact\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\UILayout\" />
+    <Folder Include="Views\Default\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="ViewComponents\Default-Index\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\_DefaultFeatureComponents\" />
+    <Folder Include="ViewComponents\UILayout\" />
+    <Folder Include="Views\Shared\Components\_UILayoutNavbarComponents\" />
+    <Folder Include="Views\Shared\Components\_UILayoutHeadComponents\" />
+    <Folder Include="Views\Shared\Components\_UILayoutHeadComponents\" />
+    <Folder Include="Views\Shared\Components\_UILayoutFooterComponents\" />
+    <Folder Include="Views\Shared\Components\_DefaultProductComponents\" />
+    <Folder Include="DAL\" />
+    <Folder Include="DAL\Entities\" />
+    <Folder Include="DAL\Context\" />
+    <Folder Include="Views\AdminLayout\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Product\" />
+    <Folder Include="Views\Register\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\Shared\Components\_DefaultPopulerProductComponents\" />
+    <Folder Include="Views\Shared\Components\_DefaultTestimonailComponents\" />
+    <Folder Include="Views\Shared\Components\_DefaultWeHelpComponents\" />
+    <Folder Include="Views\Shared\Components\_DefaultServiceComponents\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="Areas\Admin\Views\Testimonial\" />
+    <Folder Include="Views\Subscribe\" />
+    <Folder Include="Views\About\" />
+    <Folder Include="Views\Shared\Components\_DefaultTeamComponent\" />
+    <Folder Include="Views\Services\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\Testimonial\" />
+    <Folder Include="Areas\Admin\ViewComponents\" />
+    <Folder Include="Areas\Admin\ViewComponents\AdminLayoutComponent\" />
+    <Folder Include="Areas\Admin\Views\Shared\Components\" />
+    <Folder Include="Areas\Admin\Views\Shared\Components\_AdminNavbarLayoutComponenet\" />
+    <Folder Include="Areas\Admin\Views\Shared\Components\_AdminSidebarComponent\" />
+    <Folder Include="Areas\Admin\Views\Testimonial\" />
+    <Folder Include="Areas\Admin\Views\Service\" />
+    <Folder Include="Areas\Admin\Views\Team\" />
+    <Folder Include="Areas\Admin\Views\Subscriber\" />
+    <Folder Include="Areas\Admin\Views\Message\" />
+    <Folder Include="Areas\Admin\Views\SocialMedia\" />
+    <Folder Include="Areas\Admin\Views\Contact\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.31" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.31">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.31">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.29" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.31" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Models\LoginViewModel.cs">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
+    <Compile Update="Areas\Admin\ViewComponents\AdminLayoutComponent\_AdminSideBarComponent.cs">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
+    <Compile Update="Areas\Admin\ViewComponents\AdminLayoutComponent\_AdminNavbarLayoutComponent.cs">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
+  </ItemGroup>
+</Project>
